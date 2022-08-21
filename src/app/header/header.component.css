@@ -1,0 +1,35 @@
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 1rem;
+    background: var(--background2-color);
+}
+
+#btn-mobile {
+    background-image: url("../../assets/img/btn-mobile.png");
+    background-size: contain;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: none;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#menu a {
+    padding: 1rem;
+}
+
+@media (max-width: 600px) {
+    #btn-mobile {
+        display: block;
+    }
+    #menu {
+        display: none;
+    }
+}
