@@ -19,6 +19,11 @@
     box-sizing: border-box;
 }
 
+body, html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
 }
