@@ -1,0 +1,102 @@
+#main {
+    padding: 2vw 5vw;
+    background: linear-gradient(0deg, rgba(29,6,26,1) 11%, rgba(254,29,74,1) 100%);
+}
+
+#p-divisionLine {
+    margin: 0;
+    padding: 2vw 0 0 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+hr {
+    padding: 0 0 5vw 0;
+    margin: 0;
+}
+
+#section {
+    background-color: rgba(217, 217, 217, .4);
+    border-radius: .8rem;
+    padding: 5vh;
+}
+
+h1 {
+    font-size: 1.6rem;
+    padding: 5vw 0 0 3vw;
+    font-weight: 600;
+}
+
+form {
+    padding: 3vw;
+    display: block;
+    justify-content: center;
+}
+
+form .label-input {
+    margin-bottom: 5vh;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+form input, form select, form textarea {
+    background-color: rgba(217, 217, 217, .2);
+    border: 0;
+    border-bottom: solid 1px var(--white-color);
+    font-size: 1rem;
+    width: 100%;
+}
+
+form ::placeholder {
+    color: var(--white-color);
+    font-weight: 100;
+    font-size: .9rem;
+    padding-left: 2vh;
+}
+
+p {
+    font-size: .8rem;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-size: .8rem;
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#btn-1, #btn-2 {
+    width: 48%;
+}
+
+#btn-1 {
+    color: #94122c;
+    font-weight: 800;
+    border: none;
+    border-radius: 8px;
+    margin-top: 3vh;
+}
+
+#btn-2 {
+    color: var(--white-color);
+    background-color: rgba(217, 217, 217, .2);
+    font-weight: 600;
+    border: solid 1px var(--white-color);
+    border-radius: 8px;
+    margin-top: 3vh;
+}
