@@ -9,14 +9,14 @@
         <form>
             <div class="label-input">
                 <label for="email">Email:</label>
-                <input type="text" name="email" id="email">
+                <input [(ngModel)]="userLogin.usuario" type="text" name="email" id="email">
             </div>
             <div class="label-input">
                 <label for="password">Password:</label>
-                <input type="text" name="password" id="password">
+                <input [(ngModel)]="userLogin.senha" type="password" name="password" id="password">
             </div>
             <div class="button">
-                <button type="submit">LOG IN</button>
+                <button type="submit" (click)="login()">LOG IN</button>
             </div>
             <div class="signup">
                 <p>Doesn't have an account? <a routerLink="/sign-up">Sign Up</a></p>
