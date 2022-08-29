@@ -10,15 +10,15 @@
             <div class="col-1">
                 <div class="label-input">
                     <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" placeholder="Type the name you like to be called">
+                    <input [(ngModel)]="user.nome" type="text" name="name" id="name" placeholder="Type the name you like to be called">
                 </div>
                 <div class="label-input">
                     <label for="email">Email:</label>
-                    <input type="text" name="email" id="email" placeholder="Type a valid Email Adress">
+                    <input [(ngModel)]="user.usuario" type="text" name="email" id="email" placeholder="Type a valid Email Adress">
                 </div>
                 <div class="label-input">
-                    <label for="sort">Select what kind of user:</label>
-                    <select name="sort" id="sort">
+                    <label for="userType">Select what type of user:</label>
+                    <select (change)="readUserType($event)" name="userType" id="userType">
                         <option>Are you a buyer or a seller?</option>
                         <option value="buyer">Buyer</option>
                         <option value="seller">Seller</option>
@@ -28,14 +28,14 @@
             <div class="col-2">
                 <div class="label-input">
                     <label for="password">Password:</label>
-                    <input type="text" name="password" id="password" placeholder="At least 8 characters">
+                    <input (input)="verifyPassword($event)" type="password" name="password" id="password" placeholder="At least 8 characters">
                 </div>
                 <div class="label-input">
                     <label for="confirmPassword">Confirm Password:</label>
-                    <input type="text" name="confirmPassword" id="confirmPassword" placeholder="Re-enter password">
+                    <input [(ngModel)]="user.senha" type="password" name="confirmPassword" id="confirmPassword" placeholder="Re-enter password">
                 </div>
                 <div class="button">
-                    <button type="submit">SIGN UP</button>
+                    <button (click)="signup()" type="submit">SIGN UP</button>
                 </div>
                 <div class="signin">
                     <p>Already have an account? <a routerLink="/login">Sign In</a></p>
