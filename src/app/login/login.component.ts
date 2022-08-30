@@ -23,7 +23,9 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.authService.login(this.userLogin).subscribe((resp: UserLogin) => {
+    this.authService.login(this.userLogin).subscribe({ 
+      
+      next: (resp: UserLogin)=>{
       this.userLogin = resp
 
       environment.token = this.userLogin.token
@@ -31,11 +33,14 @@ export class LoginComponent implements OnInit {
       environment.id = this.userLogin.id
 
       this.router.navigate(['/start'])
-    }, erro => {
+    },
+
+    error: erro => {
       if(erro.status == 401) {
-        alert("Incorrect User or/and Password")
+        alert('Incorrect Password and/or User')
       }
-    })
+    },
+  });
   }
 
 }
