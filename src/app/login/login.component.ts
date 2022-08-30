@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
 
       environment.token = this.userLogin.token
       environment.nome = this.userLogin.nome
+      environment.tipo = this.userLogin.tipo
       environment.id = this.userLogin.id
 
       this.router.navigate(['/start'])
