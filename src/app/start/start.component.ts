@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-start',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
 
+  nome = environment.nome
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
