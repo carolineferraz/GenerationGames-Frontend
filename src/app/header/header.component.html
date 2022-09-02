@@ -7,7 +7,7 @@
             <li *ngIf="auth.headerHomeBtn()" ><a id="btn-b" routerLink="/sign-up">Sign Up</a></li>
             <li *ngIf="auth.logged()" ><a id="a-signUp" routerLink="/sign-up"><i class="fa-solid fa-tag"></i> Sell Product</a></li>
             <li *ngIf="auth.logged()" ><a id="a-signUp" routerLink="/sign-up"><i class="fa-solid fa-user-gear"></i> Settings</a></li>
-            <li *ngIf="auth.logged()" ><a id="a-signUp" routerLink="/sign-up"><i class="fa-solid fa-user-xmark"></i> Log Out</a></li>
+            <li *ngIf="auth.logged()" (click)="logOut()"><a id="a-signUp" routerLink="/sign-up"><i class="fa-solid fa-user-xmark"></i> Log Out</a></li>
         </ul>
     </nav>
 </header>
