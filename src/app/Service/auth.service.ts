@@ -31,4 +31,14 @@ export class AuthService {
 
     return ok
   }
+
+  headerHomeBtn() {
+    let ok: boolean = false;
+
+    if(environment.token == '') {
+      ok = true
+    }
+
+    return ok
+  }
 }

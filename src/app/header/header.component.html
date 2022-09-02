@@ -3,8 +3,11 @@
     <nav id="nav">
         <div id="btn-mobile" (click)="toggleMenu()"></div>
         <ul id="menu">
-            <li><a id="a-login" routerLink="/login">Login</a></li>
-            <li><a id="a-signUp" routerLink="/sign-up">Sign Up</a></li>
+            <li *ngIf="auth.headerHomeBtn()" ><a id="btn-a" routerLink="/login">Login</a></li>
+            <li *ngIf="auth.headerHomeBtn()" ><a id="btn-b" routerLink="/sign-up">Sign Up</a></li>
+            <li *ngIf="auth.logged()" ><a id="a-signUp" routerLink="/sign-up"><i class="fa-solid fa-tag"></i> Sell Product</a></li>
+            <li *ngIf="auth.logged()" ><a id="a-signUp" routerLink="/sign-up"><i class="fa-solid fa-user-gear"></i> Settings</a></li>
+            <li *ngIf="auth.logged()" ><a id="a-signUp" routerLink="/sign-up"><i class="fa-solid fa-user-xmark"></i> Log Out</a></li>
         </ul>
     </nav>
 </header>

@@ -17,6 +17,8 @@ export class StartComponent implements OnInit {
 
   ngOnInit() {
 
+    window.scroll(0,0)
+
     if(environment.token == '') {
       alert('Your session has expired, please login again')
       this.router.navigate(['/home'])
