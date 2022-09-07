@@ -7,8 +7,8 @@
 
     <!-- Create Categoty Input -->
     <div class="create-category">
-        <input type="text" name="category" id="category" placeholder="Type the category name">
-        <button type="submit" id="btn-create">Create Category</button>
+        <input [(ngModel)]="category.genero" type="text" name="category" id="category" placeholder="Type the category name">
+        <button type="submit" id="btn-create" (click)="createCategory()">Create Category</button>
     </div>
     <!-- /Create Categoty Input -->
 
