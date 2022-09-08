@@ -7,7 +7,8 @@
 
     <!-- Create Categoty Input -->
     <div class="create-category">
-        <input [(ngModel)]="category.genero" type="text" name="category" id="category" placeholder="Type the category name">
+        <input [(ngModel)]="category.genero" type="text" name="category" id="category"
+            placeholder="Type the category name">
         <button type="submit" id="btn-create" (click)="createCategory()">Create Category</button>
     </div>
     <!-- /Create Categoty Input -->
@@ -20,18 +21,26 @@
     <!-- Section Category Actions -->
     <section id="section">
         <table>
-            <tr>
-                <th>#</th>
-                <th>Category Name</th>
-                <th>Actions</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Example</td>
-                <td><button id="btn-edit">Edit</button><button id="btn-delete">Delete</button></td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Category Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of categoryList">
+                    <td>{{item.id}}</td>
+                    <td>{{item.genero}}</td>
+                    <td><button id="btn-edit">Edit</button><button id="btn-delete">Delete</button></td>
+                </tr>
+            </tbody>
         </table>
     </section>
     <!-- /Section Category Actions -->
+
+    <!-- Division Line -->
+    <hr class="mt-5">
+    <!-- /Division Line -->
 
 </main>

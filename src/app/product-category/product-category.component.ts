@@ -30,6 +30,7 @@ export class ProductCategoryComponent implements OnInit {
       this.router.navigate(['/home'])
     }
 
+    this.listAllCategories()
   }
 
 
@@ -37,7 +38,14 @@ export class ProductCategoryComponent implements OnInit {
     this.categoryService.postCategory(this.category).subscribe((resp: Category)=>{
       this.category = resp
       alert('Category registered successfully')
+      this.listAllCategories()
       this.category = new Category()
+    })
+  }
+
+  listAllCategories() {
+    this.categoryService.getAllCategories().subscribe((resp: Category[])=>{
+      this.categoryList = resp
     })
   }
 
